@@ -15,3 +15,12 @@ To set environment variables on Windows 10:
 ### NodeJS
 Download and install [NodeJS](https://nodejs.org/en/).                         
 Run `node -v` to make sure everything is ok
+
+### Setup
+You can clone from github:
+
+      git clone https://github.com/AndreNDarcie/node-gtfs-api.git
+
+      cd node-gtfs-api
+
+      npm install
