@@ -10,4 +10,8 @@ To set environment variables on Windows 10:
 3. Click on Advanced System Settings              
 4. Click on Environment variables                
 5. In System variables on variable Path add the url: `C:\Program Files\MongoDB\Server\3.2\bin`               
-6. Run `mongo -version` to make sure everything is ok             
+6. Run `mongo -version` to make sure everything is ok       
+
+### NodeJS
+Download and install [NodeJS](https://nodejs.org/en/).                         
+Run `node -v` to make sure everything is ok
