@@ -1,4 +1,6 @@
 # Node-GTFS-API
+REST API for [node-gtfs](https://github.com/brendannee/node-gtfs).    
+
 ## Getting started
 
 ### Mongo DB
