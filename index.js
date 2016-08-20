@@ -21,6 +21,15 @@ apiRoutes.get('/agency', function(req, res) {
   });
 });
 
+// Routes for an agency
+apiRoutes.get('/routes', function(req, res) {
+
+  var agency_id = req.query.agency_id;
+  gtfs.getRoutesByAgency(agency_id, function(err, routes) {
+    res.end(JSON.stringify(routes));
+  });
+});
+
 app.use('/api', apiRoutes);
 app.listen(8124);
 
