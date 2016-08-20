@@ -30,6 +30,17 @@ apiRoutes.get('/routes', function(req, res) {
   });
 });
 
+// Routes near a point
+apiRoutes.get('/routesByDistance', function(req, res) {
+
+  var lat = req.query.lat;
+  var lon = req.query.lon;
+  var radius = req.query.radius;
+  gtfs.getRoutesByDistance(lat, lon, radius, function(err, routes) {
+    res.end(JSON.stringify(routes));
+  });
+});
+
 app.use('/api', apiRoutes);
 app.listen(8124);
 
