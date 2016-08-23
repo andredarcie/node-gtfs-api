@@ -41,6 +41,17 @@ apiRoutes.get('/routesByDistance', function(req, res) {
   });
 });
 
+// Shapes by route
+apiRoutes.get('/shapes', function(req, res) {
+
+  var agency_key = req.query.agency_key;
+  var route_id = req.query.route_id;
+  var direction_id = req.query.direction_id;
+  gtfs.getShapesByRoute(agency_key, route_id, direction_id, function(err, shapes) {
+    res.end(JSON.stringify(shapes));
+  });
+});
+
 app.use('/api', apiRoutes);
 app.listen(8124);
 
