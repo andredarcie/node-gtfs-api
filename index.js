@@ -52,6 +52,17 @@ apiRoutes.get('/shapes', function(req, res) {
   });
 });
 
+// Stops by route
+apiRoutes.get('/stops', function(req, res) {
+
+  var agency_key = req.query.agency_key;
+  var route_id = req.query.route_id;
+  var direction_id = parseInt(req.query.direction_id);
+  gtfs.getStopsByRoute(agency_key, route_id, direction_id, function(err, stops) {
+    res.end(JSON.stringify(stops));
+  });
+});
+
 app.use('/api', apiRoutes);
 app.listen(8124);
 
