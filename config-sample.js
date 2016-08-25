@@ -27,11 +27,8 @@ module.exports = {
      */
 
     {
-      agency_key: 'county-connection',
-      url: 'http://cccta.org/GTFS/google_transit.zip',
-      exclude: [
-        'shapes'
-      ]
+      agency_key: 'SPTRANS',
+      url: __dirname + "/gtfs.zip"
     }
   ]
 };
