@@ -64,6 +64,9 @@ apiRoutes.get('/stops', function(req, res) {
 });
 
 app.use('/api', apiRoutes);
-app.listen(8124);
+
+var port = Number(process.env.PORT || 8000);
+
+app.listen(port);
 
 console.log('Server running at http://127.0.0.1:8124/');
