@@ -63,10 +63,21 @@ apiRoutes.get('/stops', function(req, res) {
   });
 });
 
+// Stops near a point
+apiRoutes.get('/stopsnear', function(req, res) {
+
+  var lat = req.query.lat;
+  var lon = req.query.lon;
+  var radius = req.query.radius;
+  gtfs.getStopsByDistance(lat, lon, radius, function(err, stops) {
+    res.end(JSON.stringify(stops));
+  });
+});
+
 app.use('/api', apiRoutes);
 
 var port = Number(process.env.PORT || 8000);
 
 app.listen(port);
 
-console.log('Server running at http://127.0.0.1:8124/');
+console.log('Server running at http://127.0.0.1:8000/');
