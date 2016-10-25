@@ -74,6 +74,16 @@ apiRoutes.get('/stopsnear', function(req, res) {
   });
 });
 
+// Routes that serve a specific stop
+apiRoutes.get('/routesbystop', function(req, res) {
+  
+  var agency_id = req.query.agency_id;
+  var stop_id = req.query.stop_id;
+  gtfs.getRoutesByStop(agency_id, stop_id, function(err, routes) {
+    res.end(JSON.stringify(routes));
+  });
+});
+
 app.use('/api', apiRoutes);
 
 var port = Number(process.env.PORT || 8000);
