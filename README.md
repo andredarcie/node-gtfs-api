@@ -21,7 +21,7 @@ Run `node -v` to make sure everything is ok
 ### Setup
 You can clone from github:
 
-      git clone https://github.com/AndreNDarcie/node-gtfs-api.git
+      git clone https://github.com/andredarcie/node-gtfs-api.git
 
       cd node-gtfs-api
 
